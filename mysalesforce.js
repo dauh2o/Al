@@ -58,7 +58,7 @@ function getOrderStatus(orderId) {
 
         'from TruckOrderProduct__c ',
 
-        'where OrderProduct__r.Order.OrderNumber = \'' + pad(orderId, 8) + '\''
+        'where OrderProduct__r.Order.OrderNumber = "' + pad(orderId, 8) + '"'
     );
 
     return new Promise(function(resolve, reject) {
